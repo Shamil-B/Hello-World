@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="css/style2.css">
+    </head>
+    <body>
+        <header>
+        <!--#-->
+        <!--~-->
+        <!-----Home----------------------->
+        <div class="topper2">
+            <h2 class="h2">Portfolio</h2> 
+            <img onclick="Open()" src="images/menu-1.png">          
+        </div>
+        <div class="topper">
+            <h2>Portfolio</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="user_guess.html">User Guess</a></li>
+                <li><a href="comp_guess.html">Computer Guess</a></li>
+                <li><a href="hangman.html">Hangman</a></li>
+            </ul>
+        </div>
+    </header>
+        <section id="home" class="home">
+            <p><span class="first">Hello, I'm </span><br>
+                <span class="second">Shamil Bedru.</span><br><br>
+                <span class="third">I'm practicing programming and <br> the following are 3 simple but interesting<br> games I recently developed.
+                <br><br>
+                 Enjoy them!</p>
+                <div class="menu">
+            <img onclick="Close()" src="images/close-1.png">
+            <h3>Menu</h3>
+            <h4><a onclick="Close()" href="home.html" >Home</a></h4>
+            <h4><a onclick="Close()" href="user_guess.html">User Guess</a></h4>
+            <h4><a onclick="Close()" href="comp_guess.html">Computer Guess</a></h4>
+            <h4><a onclick="Close()" href="hangman.html" >Hangman</a></h4>
+
+        </div>
+        </section>
+        <!-----About----------------------->
+ 
+        <!-----Services----------------------->
+        <section id="services" class="services">
+            <h1>Our Games</h1><br>
+            <h4>Choose from the three Games provided below and click them to play.</h4>
+            <div class="serv-cont">
+                <a href="user_guess.html"><div class="box">
+                    <img src="images/icon1-1.png">
+                    <h1>User Guess</h1><br>
+                    <p>In this game you try to guess a number with a limited life and you will be given hints too.</p>
+                
+                </div></a>
+                <a href="comp_guess.html"><div class="box">
+                    <img src="images/icon3.png">
+                    <h1>Computer Guess</h1><br>
+                    <p>As its name indicates the computer tries to guess your number provided that you will give it hints.</p>
+                </div></a>
+                <a href="hangman.html"><div class="box">
+                    <img src="images/Black_cat.jpg">
+                    <h1>Hangman Word Game</h1><br>
+                    <p>In this interesting game you will try to guess a word by each letter. This one is the most interesting.</p>
+                </div></a>
+               
+            </div> 
+            
+       </section>
+        <!------Work--------------------->
+        
+        <!-----Testimonials----------------------->
+       
+        <!-----Contact----------------------->
+       
+        <script type="text/javascript">
+
+        function Open(){
+            var menu = document.getElementsByClassName('menu');
+            menu[0].style.width = '100%';
+            menu[0].style.visibility = 'visible';
+        }
+        function Close(){
+            var menu = document.getElementsByClassName('menu');
+            menu[0].style.width = '0';
+            menu[0].style.visibility = 'hidden';
+        }
+        </script>
+    </body>
+</html>
+        

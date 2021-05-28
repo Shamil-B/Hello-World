@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Tutorial</title>
+        <link rel="stylesheet" href="css_1/style2.css">
+    </head>
+    <body>
+        <header>
+            <!--#-->
+            <!--~-->
+            <!-----Home----------------------->
+            <div class="topper2">
+                <h2 class="h2">Portfolio</h2> 
+                <img onclick="Open()" src="images/menu-1.png">          
+            </div>
+            <div class="topper">
+                <h2>Portfolio</h2>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="user_guess.html">User Guess</a></li>
+                    <li><a href="comp_guess.html">Computer Guess</a></li>
+                    <li><a href="hangman.html">Hangman</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="menu">
+            <img onclick="Close()" src="images/close-1.png">
+            <h3>Menu</h3>
+            <h4><a onclick="Close()" href="home.html" >Home</a></h4>
+            <h4><a onclick="Close()" href="user_guess.html">User Guess</a></h4>
+            <h4><a onclick="Close()" href="comp_guess.html">Computer Guess</a></h4>
+            <h4><a onclick="Close()" href="hangman.html" >Hangman</a></h4>
+
+        </div>
+
+
+        <div class="back" onclick="back()">Back</div>
+        <div class="pop"></div>
+        <div class="container">
+            <h3 class="life"></h3>
+            <h3>There is a mystrious number with me from <span class="special">1</span> to <span class="special">100</span>. Enter your guess and tap on <span class="special">"Try"</span>.<br>
+             <br><span style="color:rgb(0, 255, 170)"><b>**</b></span> If your guess is less than the number I will show you a<span class="special">"Too low"</span> message and if greater, I will show you a<span class="special">"Too high"</span> message.
+            </h3><br>
+            <input class="input" type="text"><br><br>
+            <button class="try" onclick="guess()">Try</button>
+            <h1 class="result">No guesses yet</h1>
+        </div>
+        <script>
+             function rand_num(min,max){
+                    return Math.round(Math.random()*(max-min)+min);
+                } 
+            var life = 10;
+            var heart = "";
+            var count = 0; 
+            var counter1 = 0;
+            var counter2 = 0;
+            var num =  rand_num(1,100);
+               function guess(){
+                   heart = "";
+                   life -= 1;
+                   count += 1;
+                   for(i=0; i<life ; i++){
+                   heart += "❤";
+            }
+            document.getElementsByClassName("life")[0].innerHTML = heart;
+                   var guess = document.getElementsByClassName("input")[0].value;
+                   if(guess>0 && guess<=100){
+                   if(guess<num){
+                       if(counter1==1){
+                        document.getElementsByClassName("result")[0].style.color ="white";
+                        counter1 -=1;
+                       }
+                       else {
+                        document.getElementsByClassName("result")[0].style.color = "blue";
+                        counter1 += 1;
+                       }
+                       document.getElementsByClassName("result")[0].innerHTML = "Too Low";
+                   }
+                   else if(guess>num){
+                       if(counter2==1){
+                        document.getElementsByClassName("result")[0].style.color ="white";
+                        counter2 -=1;
+                       }
+                       else {
+                        document.getElementsByClassName("result")[0].style.color = "blue";
+                        counter2 += 1;
+                       }                  
+                       document.getElementsByClassName("result")[0].innerHTML = "Too High";
+                   }
+                   else if(guess==num){
+                       pop();
+                                      }}
+                   
+                  else{
+                        document.getElementsByClassName("result")[0].innerHTML = "Please, enter a number from 1-100";
+                    }
+                  if(life==0){
+                        pop();
+                        document.getElementsByClassName("pop")[0].innerHTML = "Game Over!<br><br> You are out of lives!<br><br> The number was "+num;
+                    }
+               }
+               
+            function Open(){
+                var menu = document.getElementsByClassName('menu');
+                menu[0].style.width = '100%';
+                menu[0].style.visibility = 'visible';
+            }
+            function Close(){
+                var menu = document.getElementsByClassName('menu');
+                menu[0].style.width = '0';
+                menu[0].style.visibility = 'hidden';
+            }
+               function pop(){
+                document.getElementsByClassName("pop")[0].innerHTML = "Yayyyy, You guessed it<br> <br>right<br><br> with "+count+" guesses<br><br>"
+                document.getElementsByClassName('pop')[0].style.visibility = 'visible';
+                document.getElementsByClassName("back")[0].style.visibility = "visible";
+               }
+               function back(){
+                document.getElementsByClassName('pop')[0].style.visibility = 'hidden';
+                document.getElementsByClassName("back")[0].style.visibility = "hidden";
+                document.location.reload();
+               }
+
+               for(i=0; i<life ; i++){
+                heart += "❤";
+            }
+            document.getElementsByClassName("life")[0].innerHTML = heart;
+        </script>
+    </body>
+</html>
+        

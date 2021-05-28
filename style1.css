@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    padding: 100px;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url("../Images/Children.jpg") no-repeat ;
+    background-size: cover;
+    box-shadow:inset 0 0 15px 12px rgba(0, 0, 0,0.2);
+}
+
+.container{
+    position: absolute;
+    margin: 30px;
+    align-self: center;
+    color: white;
+    border-radius: 5px;
+    top: 80px;
+    height: fit-content;
+    width: 60%;
+    background: rgba(224, 224, 231, 0.1);
+    backdrop-filter: blur(40px);
+    text-align: center;
+    box-shadow: 0 0 15px 1px rgb(0, 0, 0),
+               inset 0 0 15px 2px rgba(0, 0, 0,0.2);
+    padding: 20px;
+
+}
+
+.try{
+    margin: 30px 0 40px 0;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    height: 30px;
+    letter-spacing: 3px;
+    box-shadow: 0 0 5px 1px rgb(255, 255, 255),
+                inset 0 0 15px 2px rgba(0, 0, 0, 0.1);
+    font-weight: 900;
+    font-family: Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.result{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26px;
+    color: rgb(229, 255, 0);
+    margin: 5px 0 30px 0;
+}
+
+.special{
+    color: rgb(229, 255, 0);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.container h3{
+    margin-top: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.input{
+    padding: 2px 0;
+    align-self: center;
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+    background: rgba(204, 199, 177,0.2);
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    color: white;
+    font-size: 25px;
+    border: none;
+    box-shadow: 0 0 5px 2px rgb(255, 255, 255),
+                inset 0 0 3px 1px black;
+}
+
+.pop{
+    position: absolute;
+    top: 140px;
+    width: 350px;
+    height: 250px;
+    border-radius: 15px;
+    background: url("../Images/Black_cat.jpg");
+    background-size: cover;
+    backdrop-filter: blur(40px);
+    text-align: center;
+    box-shadow: 0 0 15px 1px rgb(0, 0, 0),
+               inset 0 0 15px 2px rgba(0, 0, 0,0.2);    backdrop-filter: blur(4px);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    visibility: hidden;
+}
+.back{
+    position: absolute;
+    top:388px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    cursor: pointer;
+    visibility:hidden;
+    box-shadow:0 0 2px 2px rgb(0, 0, 0);
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+.container .life{
+    position: absolute;
+    float: inline;
+    left: 10px;
+    top: -40px;
+    color: rgb(229, 255, 0);
+    font-size: 25px;
+    transition: 0.2s ease-in-out;
+}
+@media(max-width:700px){
+    .container .life{
+        font-size: 18px;
+    }
+}
+
+
+
+.topper h2,.topper2 h2{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+}
+.topper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    background: transparent;
+    color: white;
+    transition: 0.5s;
+}
+.topper2 img{
+    cursor: pointer;
+}
+.topper2{
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    background: transparent;
+    color: white;
+}
+.topper ul{
+    list-style: none;
+    float: right;
+    margin: 15px 40px 0 0;
+}
+.topper ul li{
+    display: inline-block;
+    margin: 10px 25px 0 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.topper ul li a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    border-radius: 5px 0 0 5px;
+    color: transparent;
+    transition: 0.5s ease-in-out;
+    font-family: Tahoma, sans-serif;
+}
+.menu a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+    
+}
+.menu img{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 10px;
+    margin: 10px 0 0 2px;
+    width: 15px;
+    filter: invert(1);
+    height: auto;
+    visibility: hidden;
+}
+.menu h4{
+    margin-top: 10px;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.menu h3{
+    margin: 10px 0 30px 0;
+    font-size: 25px;
+}
+
+@media(max-width:700px){
+    .topper{
+        visibility: hidden;
+    }
+    .topper2{
+        visibility: visible;
+    }
+    .topper2 img{
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+    .topper2 img{
+        width: 30px;
+        height: auto; 
+    }
+    .menu{
+        visibility: hidden;
+        color: rgb(0, 0, 0);
+    }
+    .menu img{
+        visibility: visible;
+    }
+}
